@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Manrope', 'Inter', system-ui, sans-serif;
+
+  /* Semantic color tokens — paleta blanca + verde pastel */
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F4FBF7;
+  --color-surface-white: #FFFFFF;
+  --color-surface-dark: #18312B;
+
+  --color-text-primary: #18312B;
+  --color-text-secondary: #60756E;
+  --color-text-inverse: #FFFFFF;
+
+  --color-brand: #22C55E;
+  --color-brand-hover: #16A34A;
+  --color-brand-muted: rgba(34, 197, 94, 0.15);
+
+  --color-brand-pastel: #DCFAE6;
+  --color-brand-mint: #B7F0D2;
+  --color-brand-glow: #34D399;
+
+  --color-amber-subtle: #FFF7EC;
+  --color-amber-border: #FFD7A8;
+
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-conveyor: conveyor 3s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes conveyor {
+  from { transform: translateX(-60px); }
+  to { transform: translateX(60px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, sans-serif;
+  touch-action: manipulation;
+}
+
+body {
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading-custom {
+  font-family: var(--font-heading);
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.02em;
+}
+
+.font-body-custom {
+  font-family: var(--font-body);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

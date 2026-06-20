@@ -119,7 +119,7 @@ export default function ColoniasSection() {
             Atendemos en tu colonia
           </h2>
           <p className="text-[#60756E] text-base sm:text-lg leading-relaxed">
-            Si vives en estas zonas de CDMX, una visita para tu mascota está a solo un mensaje de distancia. Tu mascota recibe atención profesional con un trato cercano y responsable.
+            Si vives en estas zonas de Guadalajara, una visita para tu mascota está a solo un mensaje de distancia. Tu mascota recibe atención profesional con un trato cercano y responsable.
           </p>
         </motion.div>
 
